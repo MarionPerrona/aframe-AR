@@ -8,8 +8,7 @@
 
 <body style="margin : 0px; overflow: hidden;">
 
-    <!-- <a-scene embedded arjs> -->
-    <a-scene>
+    <a-scene embedded arjs>
         <a-assets>
             <a-asset-item id="brick-large-abyss" src="assets/brick-large-abyss.glb"></a-asset-item>
             <a-asset-item id="brick-large-dark" src="assets/brick-large-dark.glb"></a-asset-item>
@@ -44,7 +43,7 @@
             <img id="Brick5OneLine" src="assets/Bricks/Brick5OneLine.png">
         </a-assets>
         <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-            <!-- <a-marker preset="hiro"> -->
+            <a-marker preset="hiro">
                 <!-- DERNIERE LIGNE DE BRIQUE -->
                 <!-- <a-entity gltf-model="#brick-large-abyss" position="-2.00366 0.13 0" rotation="-90 0 0">
                     <a-image src="#Brick1LastLine" material="" geometry="height: 0.25; width: 0.9" rotation="90 0 0" position="0.05303 -0.250 -0.00056"></a-image>                
@@ -151,7 +150,7 @@
                     <a-image src="#Brick5OneLine" material="" geometry="height: 0.2; width: 0.8" rotation="90 0 0"
                         position="-0.08855 -0.250 -0.01028"></a-image>
                 </a-entity>
-            <!-- </a-marker> -->
+            </a-marker>
             <a-camera position="0 0.78775 3.98571" camera="" rotation="-4.3544792429942545 0.5729577951308232 0" look-controls="" wasd-controls="" data-aframe-inspector-original-camera=""></a-camera>
     </a-scene>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
