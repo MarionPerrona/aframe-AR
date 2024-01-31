@@ -3,13 +3,13 @@
 
 <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
-    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <!-- we import arjs version without NFT but with marker + location based support -->
 </head>
 
 <body style="margin : 0px; overflow: hidden;">
 
-    <a-scene embedded arjs>
+    <!-- <a-scene embedded arjs> -->
+    <a-scene>
         <a-assets>
             <a-asset-item id="brick-large-abyss" src="assets/brick-large-abyss.glb"></a-asset-item>
             <a-asset-item id="brick-large-dark" src="assets/brick-large-dark.glb"></a-asset-item>
@@ -44,7 +44,7 @@
             <img id="Brick5OneLine" src="assets/Bricks/Brick5OneLine.png">
         </a-assets>
         <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-            <a-marker preset="hiro">
+            <!-- <a-marker preset="hiro"> -->
                 <!-- DERNIERE LIGNE DE BRIQUE -->
                 <!-- <a-entity gltf-model="#brick-large-abyss" position="-2.00366 0.13 0" rotation="-90 0 0">
                     <a-image src="#Brick1LastLine" material="" geometry="height: 0.25; width: 0.9" rotation="90 0 0" position="0.05303 -0.250 -0.00056"></a-image>                
@@ -63,21 +63,21 @@
                 </a-entity> -->
 
                 <!-- AVANT DERNIERE LIGNE DE BRIQUE -->
-                <!-- <a-entity gltf-model="#brick-large-kimbie-dark" position="-1.99907 0.40381 -0.00172" rotation="-90 0 0">
+                <a-entity id="Brick1FourLine" gltf-model="#brick-large-kimbie-dark" position="-1.99907 0.40381 -0.00172" rotation="-90 0 0">
                     <a-image src="#Brick1FourLine" material="" geometry="height: 0.24; width: 0.9" rotation="90 0 0" position="0.04503 -0.250 -0.01985"></a-image>
                 </a-entity>
-                <a-entity gltf-model="#brick-large-solarized-dark" position="-1.00321 0.404 -0.002" rotation="-90 0 0">
+                <a-entity id="Brick2FourLine" gltf-model="#brick-large-solarized-dark" position="-1.00321 0.404 -0.002" rotation="-90 0 0">
                     <a-image src="#Brick2FourLine" material="" geometry="height: 0.25" rotation="90 0 0" position="-0.00013 -0.250 -0.00852"></a-image>
                 </a-entity>
-                <a-entity gltf-model="#brick-large-night-blue" position="-0.00426 0.404 -0.002" rotation="-90 0 0">
+                <a-entity id="Brick3FourLine" gltf-model="#brick-large-night-blue" position="-0.00426 0.404 -0.002" rotation="-90 0 0">
                     <a-image src="#Brick3FourLine" material="" geometry="height: 0.25" rotation="90 0 0" position="0.00074 -0.250 -0.00674"></a-image>
                 </a-entity>
-                <a-entity gltf-model="#brick-large-red" position="0.99652 0.404 -0.002" rotation="-90 0 0">
+                <a-entity id="Brick4FourLine" gltf-model="#brick-large-red" position="0.99652 0.404 -0.002" rotation="-90 0 0">
                     <a-image src="#Brick4FourLine" material="" geometry="height: 0.25" rotation="90 0 0" position="-0.0019 -0.250 -0.00476"></a-image>
                 </a-entity>
-                <a-entity gltf-model="#brick-large-dark" position="1.99268 0.404 -0.002" rotation="-90 0 0">
+                <a-entity id="Brick5FourLine" gltf-model="#brick-large-dark" position="1.99268 0.404 -0.002" rotation="-90 0 0">
                     <a-image src="#Brick5FourLine" material="" geometry="height: 0.2; width: 0.8" rotation="90 0 0" position="-0.09474 -0.250 -0.02207"></a-image>
-                </a-entity> -->
+                </a-entity>
 
                 <!-- TROISIEME LIGNE DE BRIQUE -->
                 <a-entity id="Brick1ThreeLine" gltf-model="#brick-large-solarized-dark"
@@ -151,7 +151,7 @@
                     <a-image src="#Brick5OneLine" material="" geometry="height: 0.2; width: 0.8" rotation="90 0 0"
                         position="-0.08855 -0.250 -0.01028"></a-image>
                 </a-entity>
-            </a-marker>
+            <!-- </a-marker> -->
             <a-camera position="0 0.78775 3.98571" camera="" rotation="-4.3544792429942545 0.5729577951308232 0" look-controls="" wasd-controls="" data-aframe-inspector-original-camera=""></a-camera>
     </a-scene>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
@@ -267,6 +267,26 @@
                 targets: '#Brick5ThreeLine',
                 position: ['1.9879 -2 -0.002', '1.9879 0.671 -0.002']
             }, 4900)
+
+            .add({
+                targets: '#Brick1FourLine',
+                position: ['-1.99907 -2 -0.00172', '-1.99907 0.40381 -0.00172']
+            }, 5200)
+
+            .add({
+                targets: '#Brick2FourLine',
+                position: ['-1.00321 -2 -0.002', '-1.00321 0.404 -0.002']
+            }, 5500)
+
+            .add({
+                targets: '#Brick3FourLine',
+                position: ['-0.00426 -2 -0.002', '-0.00426 0.404 -0.002']
+            }, 5800)
+
+            .add({
+                targets: '#Brick4FourLine',
+                position: ['0.99652 -2 -0.002', '0.99652 0.404 -0.002']
+            }, 6200)
     </script>
 </body>
 
